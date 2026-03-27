@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/Ph03nyx-Super-Mario-Retro-Mushroom-Super-3.256.png">
+    <script src="app.js"></script>
+
+    <title>Super Mario Bros</title>
+</head>
+
+<body>
+    <h1>Super Mario Bros Game</h1>
+    <div class="game-container">
+        <div class="ui">
+            <div>Score: <span id="score">0</span></div>
+            <div>Levels: <span id="levels">1</span></div>
+            <div>Lives: <span id="lives">3</span></div>
+
+        </div>
+
+        <div id="game-area">
+            <div id="mario"></div>
+        </div>
+
+        <div class="controls">
+            <p>Controls: </p>
+            <p>Arrow Keys: Move left or right</p>
+            <p>Down Arrows: Enter pipe when on top off it</p>
+        </div>
+    </div>
+
+    <div id="game-over">
+        <h2 id="game-over-title">Game Over</h2>
+        <p>Score: <span id="final-score">0</span></p>
+        <button id="restart-button">Play Again</button>
+    </div>
+</body>
+
+</html>

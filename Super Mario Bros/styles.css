@@ -1,0 +1,203 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #5c94fc, #87ceeb);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.game-container {
+    background: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px #000;
+}
+
+.ui {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    min-width: 800px;
+}
+
+
+/* needs to be more unique, that's why it's an id, not a class */
+
+#game-area {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: linear-gradient(to bottom, #5c94fc 80%, #228b22 80%, #228b22 100%);
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+#mario {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/mario.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+#mario.big {
+    width: 30px;
+    height: 30px;
+    background-image: url('img/mario.png');
+}
+
+.platform {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/block.png');
+}
+
+.platform.ground {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/cracked_block.png');
+}
+
+.platform.floating {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/cracked_block.png');
+}
+
+.platform.blue {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/dark_block.png');
+}
+
+.enemy.brown {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/enemy_1.png');
+}
+
+.enemy.purple {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/dark_enemy.png');
+}
+
+.coin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/coin.png');
+    animation: coinSpin 1s linear infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes coinSpin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.surprise-block {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/mysterious_block.png');
+}
+
+.surprise-block.hit {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/block.png');
+}
+
+.pipe {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+}
+
+.pipe-top-right {
+    position: absolute;
+    width: 20px;
+    top: 0;
+    right: 0;
+    height: 20px;
+    background-image: url('img/pipe_top_right.png');
+}
+
+.pipe-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/pipe_top_left.png');
+}
+
+.pipe-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/pipe_bottom_right.png');
+}
+
+.pipe-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('img/pipe_bottom_left.png');
+}
+
+.controls {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    border: 3px solid white;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+#restart-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+#restart-button:hover {
+    background-color: #ff5252;
+}
