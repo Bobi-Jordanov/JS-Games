@@ -1,0 +1,39 @@
+.score-container {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 2%;
+}
+
+.score {
+    font-style: italic;
+}
+
+.result {
+    color: red
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+    height: 420px;
+    background-color: orange;
+    border-radius: 15px;
+    margin: 2%;
+}
+
+.grid div.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 15px;
+    border: 2px black solid;
+}
